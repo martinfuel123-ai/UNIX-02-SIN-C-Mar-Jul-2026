@@ -12,3 +12,6 @@ pip install numpy
 
 # Show disk partitions, print separator, and list block devices with filesystem info
 sudo parted -l && echo -e "\n---\n" && lsblk -f
+
+# Check if system uses UEFI or BIOS
+[ -d /sys/firmware/efi ] && echo "UEFI" || echo "BIOS"
