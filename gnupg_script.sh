@@ -84,3 +84,15 @@ ls --all
 # Commit changes with a short message
 git commit -m "Explain ls -a and ls --all usage"
 
+# List files in long format, including hidden files and human-readable sizes
+ls -l -a -h
+
+# Same as above, shorter version
+ls -l -ah
+
+# Shortest combined form
+ls -lah
+
+# Commit changes with a short message
+git commit -m "Add examples of ls -l -a -h, ls -l -ah and ls -lah"
+
