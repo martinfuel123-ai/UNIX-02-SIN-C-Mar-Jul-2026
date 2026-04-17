@@ -95,4 +95,11 @@ ls -lah
 
 # Commit changes with a short message
 git commit -m "Add examples of ls -l -a -h, ls -l -ah and ls -lah"
+git add .
 
+git commit -m "Add documentation for mkdir and rmdir usage"
+# Create a directory
+mkdir test_folder
+
+# Remove an empty directory
+rmdir test_folder
