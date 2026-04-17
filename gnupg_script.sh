@@ -72,3 +72,15 @@ gpg --verify doc_no_cifradocompa.txt.gpg
 
 # Verify partner detached signature after assigning trust
 gpg --verify doc_no_cifradocompa.txt.sig doc_no_cifradocompa.txt
+
+ls -a y ls --all hacen lo mismo: muestran todos los archivos, incluyendo los ocultos (los que empiezan con .).
+
+# List all files including hidden ones
+ls -a
+
+# Same as above using long option
+ls --all
+
+# Commit changes with a short message
+git commit -m "Explain ls -a and ls --all usage"
+
