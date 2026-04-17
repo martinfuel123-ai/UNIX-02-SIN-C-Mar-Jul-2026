@@ -131,3 +131,23 @@ group = root (group owner)
 size = 47 bytes (file size)
 date and time = Apr 17 14:16 (last modification time)
 file name = doc_no_cifrado.txt
+
+# Give execute permission to all (user, group, others)
+chmod +x script.sh
+ls -l
+# result: -rwxrwxrwx
+
+# Add execute permission to user (already had it, so no change)
+chmod u+x script.sh
+ls -l
+# result: -rwxrwxrwx
+
+# Remove read permission from others
+chmod o-r secreto.txt
+ls -l
+# result: -rw-rw--w-
+
+# Set user read/write and remove all permissions from group and others
+chmod u+rw,go-rwx privado
+ls -l
+# result: -rw-rw--w-
