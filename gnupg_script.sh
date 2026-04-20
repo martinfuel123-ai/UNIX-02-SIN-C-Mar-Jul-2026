@@ -168,3 +168,9 @@ sudo sh -c 'echo "chao" >> /etc/archivo_protegido'
 #We temporarily enter superuser mode and to exit it is with the command exit
 
 sudo -i
+#Displays the path to the current user's home directory by evaluating the variable (Double quotes allow interpolation).
+echo "$HOME"
+
+#Displays the literal text "$HOME" without evaluating the variable (Single quotes prevent interpolation).
+
+echo '$HOME'
