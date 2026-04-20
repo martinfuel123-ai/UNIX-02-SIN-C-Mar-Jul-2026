@@ -151,3 +151,6 @@ ls -l
 chmod u+rw,go-rwx privado
 ls -l
 # result: -rw-rw--w-
+
+#It doesn't work because superuser permissions were not given correctly
+sudo echo "hola" > /etc/archivo_protegio 
