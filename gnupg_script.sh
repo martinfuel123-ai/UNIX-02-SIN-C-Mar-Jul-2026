@@ -174,3 +174,5 @@ echo "$HOME"
 #Displays the literal text "$HOME" without evaluating the variable (Single quotes prevent interpolation).
 
 echo '$HOME'
+#Displays the absolute path to the current Bash shell executable being used by the system.
+echo $BASH
