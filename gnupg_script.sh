@@ -154,3 +154,11 @@ ls -l
 
 #It doesn't work because superuser permissions were not given correctly
 sudo echo "hola" > /etc/archivo_protegio 
+
+#Writes text to a root-owned file using sudo tee to bypass permission errors caused by standard shell redirection.
+
+echo "hola" | sudo tee /etc/archivo_protegido > /dev/null
+
+#Writes the input to a protected file with root privileges while simultaneously displaying the output in the terminal.
+
+echo "hola" | sudo tee /etc/archivo_protegido
