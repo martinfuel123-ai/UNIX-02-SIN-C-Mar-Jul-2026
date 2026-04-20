@@ -162,3 +162,5 @@ echo "hola" | sudo tee /etc/archivo_protegido > /dev/null
 #Writes the input to a protected file with root privileges while simultaneously displaying the output in the terminal.
 
 echo "hola" | sudo tee /etc/archivo_protegido
+#Starts a subshell with root privileges to append text to a protected file, ensuring the redirection operator also has superuser permissions.
+sudo sh -c 'echo "chao" >> /etc/archivo_protegido'
