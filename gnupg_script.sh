@@ -176,3 +176,30 @@ echo "$HOME"
 echo '$HOME'
 #Displays the absolute path to the current Bash shell executable being used by the system.
 echo $BASH
+
+#Creates a new file named hola.sh and writes the shebang line to specify the script should be executed using the Bourne shell.
+
+echo '#!/bin/sh' > hola.sh
+
+#Appends an echo command to the end of hola.sh, which will display a message when the script is run.
+
+echo 'echo "Hola desde mi primer script"' >> hola.sh
+
+#Displays the full content of the hola.sh file in the terminal to verify the script's structure.
+
+cat hola.sh
+
+#Lists the file details to check current permissions, owner, and size.
+ls -l hola.sh
+#Grants execution permissions to the file, making it an executable script.
+chmod +x hola.sh
+#Attempts to run the script. It fails with "required file not found" because of the typo in the shebang line (#!/bim/sh instead of #!/bin/sh).
+./hola.sh
+#Lists the contents of the system configuration directory; typically readable by all users without elevated privileges.
+ls /etc
+#Uses sudo to create an empty file in a restricted system path where standard users do not have write access.
+sudo touch /etc/prube.txt
+#Creates a new directory within the user's home folder, which does not require root permissions.
+mkdir ~/mi_carpeta
+#Invokes superuser privileges to interact with the package manager and install new software onto the system.
+sudo apt install cowsay
