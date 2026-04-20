@@ -164,3 +164,7 @@ echo "hola" | sudo tee /etc/archivo_protegido > /dev/null
 echo "hola" | sudo tee /etc/archivo_protegido
 #Starts a subshell with root privileges to append text to a protected file, ensuring the redirection operator also has superuser permissions.
 sudo sh -c 'echo "chao" >> /etc/archivo_protegido'
+
+#We temporarily enter superuser mode and to exit it is with the command exit
+
+sudo -i
