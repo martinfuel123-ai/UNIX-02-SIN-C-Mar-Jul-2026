@@ -212,3 +212,41 @@ chmod 600 prueba.txt
 ls -l prueba.txt
 #Changes permissions to allow the owner to read, write, and execute, while others can only read and execute.
 chmod 755 prueba.txt
+
+# Displays the current file creation mask, which defines default permissions for new files.
+umask
+
+# Updates the package list from the repositories to get the latest available versions.
+sudo apt update
+
+# Installs the ACL (Access Control List) package to manage advanced file permissions.
+sudo apt-get install acl
+
+# Changes ownership of all files in the current directory to the current user.
+sudo chown -R $(whoami) .
+
+# Upgrades all installed packages to their latest available versions.
+sudo apt upgrade
+
+# Sets a stricter default permission mask (files: 640, directories: 750)
+umask 027
+
+# Creates an empty file named "archivo2"
+touch archivo2
+
+# Creates a new directory named "directorio2"
+mkdir directorio2
+
+# Lists files with detailed information (permissions, owner, size, etc.)
+ls -l
+# Sets a very restrictive default permission mask (files: 600, directories: 700)
+umask 077
+
+# Creates an empty file named "secreto.txt"
+touch secreto.txt
+
+# Creates a directory named "privado"
+mkdir privado
+
+# Lists files with detailed information (permissions, owner, size, etc.)
+ls -l
