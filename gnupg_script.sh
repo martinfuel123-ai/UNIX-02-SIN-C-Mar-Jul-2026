@@ -203,3 +203,12 @@ sudo touch /etc/prube.txt
 mkdir ~/mi_carpeta
 #Invokes superuser privileges to interact with the package manager and install new software onto the system.
 sudo apt install cowsay
+#Creates an empty file named prueba.txt in the current directory.
+touch prueba.txt
+#Restricts permissions so only the owner can read and write to the file (no permissions for group or others).
+chmod 600 prueba.txt
+
+#Lists file details. The previous attempts failed because a space was inserted between "prueba" and ".txt", causing the system to look for two non-existent files.
+ls -l prueba.txt
+#Changes permissions to allow the owner to read, write, and execute, while others can only read and execute.
+chmod 755 prueba.txt
