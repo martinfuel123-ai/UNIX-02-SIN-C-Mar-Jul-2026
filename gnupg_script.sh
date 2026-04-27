@@ -250,3 +250,23 @@ mkdir privado
 
 # Lists files with detailed information (permissions, owner, size, etc.)
 ls -l
+# Creates a new user named "luna" with a home directory and sets Zsh as the default shell
+useradd -m -s /usr/bin/zsh luna
+
+# Creates the same user using sudo (required for administrative privileges)
+sudo useradd -m -s /usr/bin/zsh luna
+
+# Lists all user home directories to verify that "luna" was created
+ls /home
+
+# Shows detailed information about the file "mi_archivo" including permissions and ownership
+ls -l mi_archivo
+
+# Changes the ownership of "mi_archivo" to user "luna"
+sudo chown luna mi_archivo
+
+# Verifies the updated ownership and permissions of "mi_archivo"
+ls -l mi_archivo
+
+# Displays the command history of the terminal session
+history
