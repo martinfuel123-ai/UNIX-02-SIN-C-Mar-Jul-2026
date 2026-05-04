@@ -8,5 +8,12 @@ aptitude -v moo
 aptitude -vv moo
 #Runs aptitude with maximum verbosity
 aptitude -vvv moo
+#Moves to home directory
+cd ~
 #Prints current working directory
 pwd 
+#Moves to parent directory
+cd ..
+#Returns safely to home
+cd ~
+
