@@ -22,3 +22,9 @@ ls -l
 ls -r
 #Combines options
 ls -lr
+#Sorts files by time in /tmp
+ls -lt /tmp
+#Sorts files by size
+ls -lS /tmp
+#Reverse order
+ls -lr /tmp
