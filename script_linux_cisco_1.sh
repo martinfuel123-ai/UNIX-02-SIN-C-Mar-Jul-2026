@@ -28,3 +28,11 @@ ls -lt /tmp
 ls -lS /tmp
 #Reverse order
 ls -lr /tmp
+#Creates a file
+touch file1.txt
+#Copies file
+cp file1.txt file2.txt
+#Verifies files
+ls
+#Stages files
+git add .
