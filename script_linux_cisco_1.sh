@@ -48,3 +48,7 @@ tail file1.txt
 chmod u+x file1.txt
 #Verifies permissions
 ls -l
+#Changes file owner to root
+sudo chown root file1.txt
+#Verifies owner
+ls -l
