@@ -44,3 +44,7 @@ cat file1.txt
 head file1.txt
 #Shows last lines
 tail file1.txt
+#Adds execute permission
+chmod u+x file1.txt
+#Verifies permissions
+ls -l
