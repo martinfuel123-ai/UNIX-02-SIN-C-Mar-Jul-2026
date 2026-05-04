@@ -16,4 +16,9 @@ pwd
 cd ..
 #Returns safely to home
 cd ~
-
+#Lists files with details
+ls -l
+#Lists files in reverse order
+ls -r
+#Combines options
+ls -lr
