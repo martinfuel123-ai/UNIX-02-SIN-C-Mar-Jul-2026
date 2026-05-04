@@ -52,3 +52,7 @@ ls -l
 sudo chown root file1.txt
 #Verifies owner
 ls -l
+#Copies system file (safe and accessible)
+cp /etc/hosts .
+#Verifies copy
+ls
