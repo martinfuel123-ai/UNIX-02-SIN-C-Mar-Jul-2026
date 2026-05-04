@@ -56,3 +56,5 @@ ls -l
 cp /etc/hosts .
 #Verifies copy
 ls
+#Creates a 1MB file (safe version)
+dd if=/dev/zero of=sample.bin bs=1M count=1
