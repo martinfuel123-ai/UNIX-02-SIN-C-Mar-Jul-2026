@@ -8,3 +8,5 @@ aptitude -v moo
 aptitude -vv moo
 #Runs aptitude with maximum verbosity
 aptitude -vvv moo
+#Prints current working directory
+pwd 
