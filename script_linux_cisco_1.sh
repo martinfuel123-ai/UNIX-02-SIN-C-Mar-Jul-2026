@@ -36,3 +36,11 @@ cp file1.txt file2.txt
 ls
 #Stages files
 git add .
+#Writes content into file
+echo "Hello World" > file1.txt
+#Displays file content
+cat file1.txt
+#Shows first lines
+head file1.txt
+#Shows last lines
+tail file1.txt
