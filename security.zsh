@@ -11,3 +11,7 @@ touch test.txt
 ls -la
 #View all system groups
 cat /etc/group | head -10 
+# Displays the current user's UID, primary GID, and all group IDs
+id -u
+id -g
+id -G
