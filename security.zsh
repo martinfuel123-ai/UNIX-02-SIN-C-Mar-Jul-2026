@@ -38,3 +38,5 @@ grep -E "desarrolladores|operaciones|servicios_web" /etc/group
 
 # Displays the main options and help information for groupadd
 groupadd --help
+# Displays the GID ranges configured in the system
+grep "GID_MIN\|GID_MAX\|SYS_GID" /etc/login.defs
