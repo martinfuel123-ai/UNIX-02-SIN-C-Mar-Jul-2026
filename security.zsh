@@ -6,3 +6,6 @@ groups
 cat /etc/passwd
 # Displays the first 10 lines of the passwd file
 cat /etc/passwd | head -10 
+# They inherit the UID and the GEID
+touch test.txt
+ls -la
