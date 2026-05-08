@@ -61,3 +61,9 @@ addgroup --system cache_web
 
 # Verifies that the groups were created successfully
 grep "diseño\|marketing\|cache_web" /etc/group
+
+# Append current user to the "desarrolladores" group (-aG keeps existing group memberships)
+sudo usermod -aG desarrolladores $USER
+
+# Append current user to the "diseno" group (-aG ensures non-destructive group addition)
+sudo usermod -aG diseno $USER
