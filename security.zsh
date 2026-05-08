@@ -40,3 +40,24 @@ grep -E "desarrolladores|operaciones|servicios_web" /etc/group
 groupadd --help
 # Displays the GID ranges configured in the system
 grep "GID_MIN\|GID_MAX\|SYS_GID" /etc/login.defs
+# Creates a group named diseño using addgroup
+addgroup diseño
+
+# Creates a group with a specific GID
+addgroup --gid 2100 marketing
+
+# Creates a system group named cache_web
+addgroup --system cache_web
+
+# Verifies that the groups were created successfully
+grep "diseño\|marketing\|cache_web" /etc/group# Creates a group named diseño using addgroup
+addgroup diseño
+
+# Creates a group with a specific GID
+addgroup --gid 2100 marketing
+
+# Creates a system group named cache_web
+addgroup --system cache_web
+
+# Verifies that the groups were created successfully
+grep "diseño\|marketing\|cache_web" /etc/group
