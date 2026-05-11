@@ -100,3 +100,17 @@ usermod -aG diseno,marketing,grupo_temporal root
 
 # Displays the UID, GID, and group memberships of the root user
 id root
+# Creates the proyectos, reportes, and scripts directories inside ~/lab_chgrp
+mkdir -p ~/lab_chgrp/{proyectos,reportes,scripts}
+
+# Creates the app.py file inside the proyectos directory
+touch ~/lab_chgrp/proyectos/app.py
+
+# Creates the config.json file inside the proyectos directory
+touch ~/lab_chgrp/proyectos/config.json
+
+# Creates the informe.txt file inside the reportes directory
+touch ~/lab_chgrp/reportes/informe.txt
+
+# Creates the deploy.sh file inside the scripts directory
+touch ~/lab_chgrp/scripts/deploy.sh
