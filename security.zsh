@@ -119,3 +119,8 @@ ls -la ~/lab_chgrp/proyectos/
 
 # Displays detailed information about the files inside the reportes directory
 ls -la ~/lab_chgrp/reportes/
+# Changes the group ownership of app.py to the "desarrolladores" group
+chgrp desarrolladores ~/lab_chgrp/proyectos/app.py
+
+# Displays detailed information about the app.py file, including permissions and group ownership
+ls -l ~/lab_chgrp/proyectos/app.py
