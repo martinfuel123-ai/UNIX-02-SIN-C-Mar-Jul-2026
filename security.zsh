@@ -134,3 +134,8 @@ ls -la ~/lab_chgrp/proyectos/
 
 # Displays detailed information about the files inside the reportes directory
 ls -la ~/lab_chgrp/reportes/
+# Displays all files and subdirectories inside the scripts directory in detailed recursive format
+ls -laR ~/lab_chgrp/scripts/
+
+# Recursively changes the group ownership of the reportes directory to the "diseno" group and shows each processed file
+chgrp -Rv diseno ~/lab_chgrp/reportes/
