@@ -124,3 +124,13 @@ chgrp desarrolladores ~/lab_chgrp/proyectos/app.py
 
 # Displays detailed information about the app.py file, including permissions and group ownership
 ls -l ~/lab_chgrp/proyectos/app.py
+# Changes the group ownership of config.json and informe.txt to the "diseno" group
+chgrp diseno \
+~/lab_chgrp/proyectos/config.json \
+~/lab_chgrp/reportes/informe.txt
+
+# Displays detailed information about the files inside the proyectos directory
+ls -la ~/lab_chgrp/proyectos/
+
+# Displays detailed information about the files inside the reportes directory
+ls -la ~/lab_chgrp/reportes/
