@@ -90,3 +90,8 @@ groupadd grupo_temporal
 usermod -aG grupo_temporal root
 # Displays the current user's UID, GID, and group memberships
 id $USER
+# Sets "desarrolladores" as the primary supplementary group list for the root user
+usermod -G desarrolladores root
+
+# Displays the UID, GID, and group memberships of the root user
+id root
