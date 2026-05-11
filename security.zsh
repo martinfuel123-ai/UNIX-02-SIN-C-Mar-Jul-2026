@@ -95,3 +95,8 @@ usermod -G desarrolladores root
 
 # Displays the UID, GID, and group memberships of the root user
 id root
+# Adds the root user to the "diseno", "marketing", and "grupo_temporal" groups without removing existing memberships
+usermod -aG diseno,marketing,grupo_temporal root
+
+# Displays the UID, GID, and group memberships of the root user
+id root
