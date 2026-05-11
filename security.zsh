@@ -114,3 +114,8 @@ touch ~/lab_chgrp/reportes/informe.txt
 
 # Creates the deploy.sh file inside the scripts directory
 touch ~/lab_chgrp/scripts/deploy.sh
+# Displays detailed information about the files inside the proyectos directory
+ls -la ~/lab_chgrp/proyectos/
+
+# Displays detailed information about the files inside the reportes directory
+ls -la ~/lab_chgrp/reportes/
