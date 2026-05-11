@@ -67,3 +67,10 @@ sudo usermod -aG desarrolladores $USER
 
 # Append current user to the "diseno" group (-aG ensures non-destructive group addition)
 sudo usermod -aG diseno $USER
+# Displays the groups the current user belongs to
+groups
+
+# Displays user ID (UID), group ID (GID), and all associated groups
+id
+# Searches for the "desarrolladores" and "diseno" groups inside the /etc/group file
+grep "desarrolladores\|diseno" /etc/group
