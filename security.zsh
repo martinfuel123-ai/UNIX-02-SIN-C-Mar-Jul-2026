@@ -83,3 +83,10 @@ grep $USER /etc/group
 adduser $USER root marketing
 # Searches for the "root" group entry inside the /etc/group file
 grep root /etc/group
+# Creates a new group named "grupo_temporal"
+groupadd grupo_temporal
+
+# Adds the root user to the "grupo_temporal" group without removing existing group memberships
+usermod -aG grupo_temporal root
+# Displays the current user's UID, GID, and group memberships
+id $USER
