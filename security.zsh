@@ -74,3 +74,12 @@ groups
 id
 # Searches for the "desarrolladores" and "diseno" groups inside the /etc/group file
 grep "desarrolladores\|diseno" /etc/group
+# Displays the current user's UID, GID, and group memberships
+id $USER
+
+# Searches for the current user inside the /etc/group file
+grep $USER /etc/group
+# Attempts to add the current user to the "root" and "marketing" groups using adduser
+adduser $USER root marketing
+# Searches for the "root" group entry inside the /etc/group file
+grep root /etc/group
