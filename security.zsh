@@ -20,3 +20,9 @@ ls -la ~/antes_de_newgrp.tx
 touch ~/despues_de_newgrp.txt
 ls -la ~/despues_de_newgrp.txt
 ##The group is now 'desarrolladores'
+
+#Create a directory
+mkdir -p ~/proyecto_dev/src
+ls -la ~
+#mkdir -p ~/proyecto_dev/src creates the proyecto_dev folder and the src folder inside it.
+#ls -la ~ displays all files and folders in the home directory (~) with detailed information, including hidden files.
