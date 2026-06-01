@@ -4,3 +4,9 @@ echo $SHELL
 echo $RANDOM
 echo $UID
 echo $OSTYPE
+ps -ef
+df --human-readable 
+#!/usr/bin/env bash
+#!/bin/bash
+bash -xblackhatbash1.sh
+bash -rblackhatbash1.sh
