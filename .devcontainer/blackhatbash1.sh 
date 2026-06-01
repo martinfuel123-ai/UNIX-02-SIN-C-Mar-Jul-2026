@@ -8,5 +8,7 @@ ps -ef
 df --human-readable 
 #!/usr/bin/env bash
 #!/bin/bash
-bash -xblackhatbash1.sh
-bash -rblackhatbash1.sh
+# Run script in debug mode (shows each command before executing)
+bash -x blackhatbash1.sh
+# Run bash with restricted mode (NOT normally used for scripts like this)
+bash -r blackhatbash1.sh
