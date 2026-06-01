@@ -67,10 +67,7 @@ RUN git config --system --add safe.directory '*' \
  && git config --system pull.rebase false \
  && git lfs install --system
 
-# FORZAR BASH COMO SHELL POR DEFECTO
-RUN chsh -s /bin/bash root
+# 🔥 Prompt personalizado
+RUN echo 'PS1="\[\e[36m\][Jose Martin Fuel]\[\e[0m\] \[\e[33m\]\W\[\e[0m\] \$ "' >> /root/.bashrc
 
-# Prompt personalizado en bash
-RUN echo 'PS1="\[\e[36m\][Martin-Fuel]\[\e[0m\] \[\e[33m\]\W\[\e[0m\] \$ "' >> /root/.bashrc
-
-CMD ["/bin/bash"]
+CMD ["/bin/bash"]git status
