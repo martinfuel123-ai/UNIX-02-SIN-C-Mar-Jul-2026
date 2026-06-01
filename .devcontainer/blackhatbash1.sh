@@ -13,9 +13,4 @@ df --human-readable
 bash -x blackhatbash1.sh
 # Run bash with restricted mode (NOT normally used for scripts like this)
 bash -r blackhatbash1.sh
-#script.sh
-#bash script.sh
-#Run
-chmod u+x helloworld.sh
-./helloworld.sh
-bash -n blackhatbash1.sh
+  
