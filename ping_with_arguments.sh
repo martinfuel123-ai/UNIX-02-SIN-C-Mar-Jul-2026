@@ -16,3 +16,4 @@ do
 done
 
 ping -c 3 "${TARGET}"
+
