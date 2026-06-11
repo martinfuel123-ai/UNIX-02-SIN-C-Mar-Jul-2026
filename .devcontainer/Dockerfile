@@ -118,13 +118,7 @@ SHELL ["/bin/bash", "-c"]
 # codespaces mounts repos in /workspaces
 WORKDIR /workspaces
 
-# Configuración de Git para el contenedor:
-# - safe.directory *: confía en cualquier repo montado (necesario porque
-#   /workspaces/... tiene un UID distinto al de root dentro del container).
-# - init.defaultBranch main: evita warnings de "master vs main" en git init.
-# - pull.rebase false: merge por defecto al hacer pull (más intuitivo)
-# - git lfs install --system: registra los hooks de LFS globalmente para
-#   que, si un repo los necesita, funcionen sin sorpresas.
+# git settings for the container: trust all repos, main branch, merge on pull, lfs
 RUN git config --system --add safe.directory '*' \
  && git config --system init.defaultBranch main \
  && git config --system pull.rebase false \
