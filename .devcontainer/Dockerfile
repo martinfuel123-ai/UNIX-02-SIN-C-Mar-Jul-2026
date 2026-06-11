@@ -16,13 +16,9 @@ ENV DEBIAN_FRONTEND=noninteractive \
     TERM=xterm-256color
 
 
-# ----------------------------------------------------------------------------
-# Pre-respuesta a una pregunta interactiva de Wireshark
-# ----------------------------------------------------------------------------
-# Wireshark/tshark PREGUNTA durante su instalación si los usuarios
-# normales (no-root) deben poder capturar paquetes. Como en el contenedor
-# siempre somos root, respondemos "false" POR ADELANTADO usando
-# debconf-set-selections para que no detenga el build esperando input.
+# this pre answers wiresharks question so the build does not hang
+# wireshark asks if non root users can capture, we say false
+# the pipe sends the echo output to debconf, BHB Ch.1 on pipes
 RUN echo "wireshark-common wireshark-common/install-setuid boolean false" \
     | debconf-set-selections
 
