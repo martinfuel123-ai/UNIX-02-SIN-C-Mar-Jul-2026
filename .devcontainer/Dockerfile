@@ -23,24 +23,13 @@ RUN echo "wireshark-common wireshark-common/install-setuid boolean false" \
     | debconf-set-selections
 
 
-# ----------------------------------------------------------------------------
-# RUN: ejecutar comandos durante la construcción de la imagen
-# ----------------------------------------------------------------------------
-# Aquí instalamos TODO el software del curso en un solo RUN.
-#
-#   apt-get update          -> actualiza la lista de paquetes disponibles
-#   apt-get install         -> descarga e instala los paquetes listados
-#     -y                    -> responde "sí" automáticamente
-#     --no-install-recommends -> instala SOLO lo esencial (no los extras
-#                                sugeridos). Ahorra cientos de MB.
-#
-# ¿Por qué un solo RUN gigante y no 10 RUN pequeños?
-# Porque CADA RUN crea una capa nueva en la imagen. Menos capas = imagen
-# más pequeña, más rápida de construir y de descargar.
-#
-# El "&&" encadena comandos: ejecuta el siguiente SOLO SI el anterior
-# terminó bien. Si algo falla, el build se detiene con error (que es lo
-# que queremos: mejor un error claro que una imagen rota).
+# RUN executes commands during the image build
+# apt-get update downloads the package index from repos
+# apt-get install downloads and installs the listed packages
+# -y says yes to prompts, --no-install-recommends skips extras
+# one big RUN makes fewer layers so the image is smaller, BHB Ch.3
+# && chains commands, next runs only if previous succeeded, BHB Ch.2
+# trailing backslash continues on next line for readability
 RUN apt-get update && apt-get install -y --no-install-recommends \
     \
     # === Editores de texto y shells (intérpretes de comandos) ===
