@@ -32,27 +32,21 @@ RUN echo "wireshark-common wireshark-common/install-setuid boolean false" \
 # trailing backslash continues on next line for readability
 RUN apt-get update && apt-get install -y --no-install-recommends \
     \
-    # === Editores de texto y shells (intérpretes de comandos) ===
+    # text editors: neovim, vim, zsh shell, bash completion
     neovim \
     vim \
     zsh \
     bash-completion \
     \
-    # === Herramientas de 4ta generación ===
-    # Estas son las protagonistas de las Unidades 2, 3 y 4:
+    # text processing: perl, make, gawk, sed, grep
+    # gawk (awk), sed and grep are covered in BHB Ch.2
     perl \
     make \
     gawk \
     sed \
     grep \
     \
-    # === Utilidades básicas de UNIX ===
-    # coreutils trae cat, ls, head, tail, sort, cut, tr, etc.
-    # findutils trae find y xargs.
-    # procps trae ps, top, kill (gestión de procesos).
-    # less = paginador para leer archivos largos.
-    # tree = muestra directorios como árbol.
-    # jq = procesa JSON desde la línea de comandos.
+    # basic unix: coreutils (cat ls head), findutils (find xargs), procps (ps top), less, tree, jq for json
     coreutils \
     findutils \
     procps \
@@ -60,15 +54,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     tree \
     jq \
     \
-    # === Páginas de manual (comando `man`) ===
-    # La imagen base de Kali viene sin documentación para
-    # ahorrar espacio. La reinstalamos porque en el curso "man bash" o
-    # "man grep" es material de consulta obligada.
+    # man pages because kali removes them to save space
     man-db \
     manpages \
     manpages-posix \
     \
-    # === Red básica y utilidades de descarga ===
+    # downloads and networking: curl, wget, git, lfs, ca-certs, locales
     curl \
     wget \
     git \
@@ -76,22 +67,18 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
     locales \
     \
-    # === Linter (revisor automático de errores) para scripts Bash ===
+    # shellcheck checks bash scripts for errors
     shellcheck \
     \
-    # === Reconocimiento y escaneo de red ===
-    # nmap = el escáner de puertos más famoso.
-    # masscan = escaneo masivo de rangos grandes de IPs.
+    # nmap scans ports, masscan scans fast over big ranges
     nmap \
     masscan \
     \
-    # === Captura y análisis de paquetes de red ===
-    # tcpdump = capturador clásico por terminal.
-    # tshark = versión de terminal de Wireshark.
+    # tcpdump captures packets, tshark is the terminal wireshark
     tcpdump \
     tshark \
     \
-    # === Utilidades de red variadas ===
+    # net tools: netcat, socat, dns, whois, traceroute, mtr, iproute2, netstat, ping
     netcat-traditional \
     socat \
     dnsutils \
@@ -102,17 +89,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     net-tools \
     iputils-ping \
     \
-    # === Anonimato: Tor y similares ===
-    # tor = cliente de la red Tor.
-    # torsocks = "envoltorio" que hace pasar cualquier comando por Tor.
-    # proxychains4 = encadena múltiples proxies.
-    # obfs4proxy = ofusca el tráfico de Tor para evadir bloqueos.
+    # tor, torsocks, proxychains4, obfs4proxy for anonymous traffic
     tor \
     torsocks \
     proxychains4 \
     obfs4proxy \
     \
-    # === Cliente HTTP más legible que curl para aprender ===
+    # httpie is like curl but easier to read
     httpie \
     \
  # --- Después de instalar, activamos el idioma español ---
