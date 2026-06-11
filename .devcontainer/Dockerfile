@@ -133,4 +133,6 @@ RUN chsh -s /usr/bin/zsh root
 RUN cat >> /root/.zshrc <<'EOF'
 PROMPT='%F{cyan}[Martin-Fuel]%f %F{yellow}%1~%f %(?.%F{green}✔️.%F{red}✘)%f %# '
 EOF
+# CMD runs when the container starts, RUN runs during the build
+# this starts zsh, codespaces overrides it but good practice
 CMD ["/usr/bin/zsh"]
