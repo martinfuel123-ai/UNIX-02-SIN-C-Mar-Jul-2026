@@ -5,28 +5,11 @@
 FROM kalilinux/kali-rolling:latest
 
 
-# ----------------------------------------------------------------------------
-# ENV: variables de entorno permanentes dentro del contenedor
-# ----------------------------------------------------------------------------
-# Las variables de entorno son "ajustes globales" que cualquier programa
-# del sistema puede leer. Se escriben en MAYÚSCULAS por convención.
-#
-#   DEBIAN_FRONTEND=noninteractive
-#     Le dice al instalador de paquetes (apt) "no me hagas preguntas
-#     interactivas, asume respuestas por defecto". Sin esto, algunos
-#     paquetes pausarían el build esperando que pulsemos una tecla y se
-#     quedaría colgado para siempre (porque no hay nadie mirando).
-#
-#   LANG / LC_ALL=es_ES.UTF-8
-#     Configuran idioma y codificación de caracteres. UTF-8 es lo que
-#     permite que acentos, ñ, €, emojis, etc. se muestren bien.
-#
-#   TERM=xterm-256color
-#     Le indica a los programas que la terminal admite 256 colores, para
-#     que vim, nvim, htop, etc. se vean con todos sus colores.
-#
-# La barra invertida "\" al final de cada línea significa "esto continúa
-# en la línea siguiente". Solo es para legibilidad.
+# ENV creates environment variables that programs can read
+# DEBIAN_FRONTEND stops apt from asking during build
+# LANG and LC_ALL set spanish locale with utf-8 encoding
+# TERM tells programs the terminal supports 256 colors
+# backslash at the end continues on next line, BHB Ch.1 on env vars
 ENV DEBIAN_FRONTEND=noninteractive \
     LANG=es_ES.UTF-8 \
     LC_ALL=es_ES.UTF-8 \
