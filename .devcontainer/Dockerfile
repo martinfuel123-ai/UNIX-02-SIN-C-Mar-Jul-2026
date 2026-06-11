@@ -126,6 +126,10 @@ RUN git config --system --add safe.directory '*' \
 
 # chsh changes the login shell for root from sh to zsh
 RUN chsh -s /usr/bin/zsh root
+# heredoc appends a custom prompt to zshrc
+# <<'EOF' is a heredoc, text between markers goes to cat as input
+# quotes around EOF stop shell expansion, BHB Ch.1 on heredocs
+# the PROMPT line shows: [Martin-Fuel] in cyan, dir in yellow, status icon
 RUN cat >> /root/.zshrc <<'EOF'
 PROMPT='%F{cyan}[Martin-Fuel]%f %F{yellow}%1~%f %(?.%F{green}✔️.%F{red}✘)%f %# '
 EOF
