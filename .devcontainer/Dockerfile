@@ -98,9 +98,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     # httpie is like curl but easier to read
     httpie \
     \
- # --- Después de instalar, activamos el idioma español ---
- # sed busca "# es_ES.UTF-8" en /etc/locale.gen y le quita el "#" para
- # activar esa línea. Luego locale-gen compila los archivos de idioma.
+ # sed uncomments the spanish locale line then locale-gen builds it
+ # sed -i edits the file in place, BHB Ch.2 on sed
  && sed -i 's/# es_ES.UTF-8/es_ES.UTF-8/' /etc/locale.gen \
  && locale-gen \
  \
